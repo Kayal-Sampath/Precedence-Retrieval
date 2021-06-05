@@ -14,7 +14,7 @@ def execute(f,m,pi):
                 pass;
         loop(list13,j,len1,m,pi)
 def loop(l,j,len1,m,pi):
-    fin2=open('/home/kayal/Desktop/Dataset/Task_2/catch/prior_embedding/vector'+str(pi)+'.txt','r')
+    fin2=open('catch/prior_embedding/vector'+str(pi)+'.txt','r')
     #print(pi)
     execute1(l,fin2,j,len1,m,pi)
     
@@ -37,10 +37,10 @@ def matrix(v,j,y,len1,len2,m,pi):
         for r in range (0,len2-1):
             m[j-1,y-1]=v
 def input1(pi):
-    f31=open('/home/kayal/Desktop/Dataset/Task_2/catch/current_embedding/vector170.txt','r')
+    f31=open('catch/current_embedding/vector170.txt','r')
     len1=calculate_length(f31)
     print(len1)
-    f32=open('/home/kayal/Desktop/Dataset/Task_2/catch/prior_embedding/vector'+str(pi)+'.txt','r')
+    f32=open('catch/prior_embedding/vector'+str(pi)+'.txt','r')
     len2=calculate_length(f32)
     print(len2)
     m = numpy.zeros(shape=(len1-2,len2-2), dtype=float)
@@ -51,11 +51,11 @@ def calculate_length(f):
     len1=len(a1s)
     return len1;
 def inputfile(m,pi):
-    file1=open('/home/kayal/Desktop/Dataset/Task_2/catch/current_embedding/vector170.txt','r')
+    file1=open('catch/current_embedding/vector170.txt','r')
     execute(file1,m,pi)
 def write_result(m1,b):
     print("Writing")
-    o=open('/home/kayal/Desktop/Dataset/pr/irrelevant/170'+'-'+str(b)+'.txt','w+')
+    o=open('pr/irrelevant/170'+'-'+str(b)+'.txt','w+')
     numpy.set_printoptions(threshold=numpy.nan)
     o.write(str(m1))
 if __name__ == '__main__':
