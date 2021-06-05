@@ -1,7 +1,7 @@
 import numpy as np
-fin1=open('/home/kayal/Desktop/Dataset/kayal/project/results/check_catch1.txt','r')
-fin2=open('/home/kayal/Desktop/Dataset/kayal/project/results/check_gn1.txt','r')
-#t=open('/home/kayal/Desktop/score.txt','w')
+fin1=open('output.txt','r')
+fin2=open('ground_truth.txt','r')
+
 f1=fin1.read()
 f2=fin2.read()
 pre=f1.split('\n')
@@ -25,11 +25,7 @@ for i in range(0,200):
                 #print('1')
                 hit=hit+1
                 score = hit /5
-                #s=score / len(act)
-    #print(hit)
-    #print(score)
-    s=np.mean(score)        
-            #check(p,a)
 
-    #print(score / 200)
+    s=np.mean(score)        
+            
 
