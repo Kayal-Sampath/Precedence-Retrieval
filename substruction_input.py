@@ -42,35 +42,30 @@ def getSimilarity(dict1,dict2):
             pass
         i = i + 1
     return cos_sim(v1,v2)
-if __name__ == '__main__': 
-    f1= open ('/home/kayal/Desktop/Dataset/Task_2/Catch_score.txt','w+',encoding = "ISO-8859-1")
-    dict2= '/home/kayal/Desktop/Dataset/Task_2/Prior_Cases/prior_case_0001.txt'
-    dict1='/home/kayal/Desktop/Dataset/Task_2/Current_Cases/current_case_0200.txt'
-    getSimilarity(process(dict1),process(dict2))
-"""
-    #dict2=process('/home/kayal/Desktop/b.txt')
+    dict2=process('/home/kayal/Desktop/b.txt')
+    
 def filesearch(dict1):
     print("function called")    
     for i in range(1,10):
-        dict2= '/home/kayal/Desktop/Dataset/Task_2/Prior_Cases/prior_case_000'+ str(i) +'.txt' 
+        dict2= 'Prior_Cases/prior_case_000'+ str(i) +'.txt' 
         f1.write('000'+str(i)+'  ')
         f1.write(str(getSimilarity(process(dict1),process(dict2))))
         f1.write('\n')
         print("written:"+str(i))
     for i in range(10,100):
-        dict2= '/home/kayal/Desktop/Dataset/Task_2/Prior_Cases/prior_case_00'+ str(i) +'.txt' 
+        dict2= 'Prior_Cases/prior_case_00'+ str(i) +'.txt' 
         f1.write('00'+str(i)+'  ')
         f1.write(str(getSimilarity(process(dict1),process(dict2))))
         f1.write('\n')
         print("written:"+str(i))
     for i in range(100,1000):
-        dict2= '/home/kayal/Desktop/Dataset/Task_2/Prior_Cases/prior_case_0'+ str(i) +'.txt' 
+        dict2= 'Prior_Cases/prior_case_0'+ str(i) +'.txt' 
         f1.write('0'+str(i)+'  ')
         f1.write(str(getSimilarity(process(dict1),process(dict2))))
         f1.write('\n')
         print("written:"+str(i))
     for i in range(1000,2001):
-        dict2= '/home/kayal/Desktop/Dataset/Task_2/Prior_Cases/prior_case_'+ str(i) +'.txt' 
+        dict2= 'Prior_Cases/prior_case_'+ str(i) +'.txt' 
         f1.write(str(i)+'  ')
         f1.write(str(getSimilarity(process(dict1),process(dict2))))
         f1.write('\n')
@@ -80,34 +75,34 @@ if __name__ == '__main__':
         print("for loop:"+str(j))
         f1.write(",")
         f1.write("Current_Case_00"+str(j)+"\n")
-        dict1 = '/home/kayal/Desktop/Dataset/Task_2/C/c'+str(j)+'.txt'
+        dict1 = 'Dataset/Task_2/C/c'+str(j)+'.txt'
         filesearch(dict1) 
-fout=open('/home/kayal/Desktop/Dataset/Task_2/current_catch','r')
+fout=open('Dataset/Task_2/current_catch','r')
 if __name__ == '__main__': 
     for j in range(1,10):
         print("for loop:"+str(j))
         f1.write(",")
         f1.write("Current_Case_000"+str(j)+"\n")
-        dict1='/home/kayal/Desktop/Dataset/Task_2/Current_Cases/current_case_000'+str(j)+'.txt'
+        dict1='Dataset/Task_2/Current_Cases/current_case_000'+str(j)+'.txt'
         filesearch(dict1)
     for j in range(10,100):
         print("for loop:"+str(j))
         f1.write(",")
         f1.write("Current_Case_00"+str(j)+"\n")
-        dict1='/home/kayal/Desktop/Dataset/Task_2/Current_Cases/current_case_00'+str(j)+'.txt'
+        dict1='Dataset/Task_2/Current_Cases/current_case_00'+str(j)+'.txt'
         filesearch(dict1)
     for j in range(100,201):
         print("for loop:"+str(j))
         f1.write(",")
         f1.write("Current_Case_0"+str(j)+"\n")
-        dict1='/home/kayal/Desktop/Dataset/Task_2/Current_Cases/current_case_0200.txt'
+        dict1='Dataset/Task_2/Current_Cases/current_case_0200.txt'
         filesearch(dict1)
-"""
-"""
+
+
 for i in range(1,201):
-    f2 = open('/home/kayal/Desktop/Dataset/Task_2/C1/c'+str(i)+'.txt','w+')       
-    fo = open('/home/kayal/Desktop/Dataset/Task_2/Catch_Score.txt','r')
+    f2 = open('Dataset/Task_2/C1/c'+str(i)+'.txt','w+')       
+    fo = open('Catch_Score.txt','r')
     x = fo.read()
     t=x.split(',')
     f2.write(str(t[i]))   
-"""    
+   
