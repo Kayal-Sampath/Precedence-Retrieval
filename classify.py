@@ -2,11 +2,11 @@ import numpy as np
 from sklearn import svm
 from sklearn.metrics import accuracy_score
 
-data_train = np.loadtxt('/home/kayal/Desktop/finalll/subs_train.csv', delimiter=',')
+data_train = np.loadtxt('subs_train.csv', delimiter=',')
 x_train=data_train[:,0:100]
 y_train=data_train[:,100]
 
-data_test = np.loadtxt('/home/kayal/Desktop/finalll/subs_test.csv', delimiter=',')
+data_test = np.loadtxt('subs_test.csv', delimiter=',')
 x_test=data_test[:,0:100]
 y_test=data_test[:,100]
 
@@ -15,11 +15,11 @@ data.fit(x_train,y_train)
 #print("training Accuracy")
 predicted=data.predict(x_test)
 a=accuracy_score(y_test,predicted)
-fout=open('/home/kayal/Desktop/finalll/subs_final_out.txt','w+',encoding = "UTF-8")
+fout=open('subs_final_out.txt','w+',encoding = "UTF-8")
 def checkdigits(c2):
     return len(str(c2))
 def insert(i,fout):
-    fin=open('/home/kayal/Desktop/process/r_ir.txt','r')
+    fin=open('r_ir.txt','r')
     f2=fin.readlines()
     try:
         c1=f2[i-1]
